@@ -512,6 +512,8 @@ target_link_libraries(falcon PRIVATE
 #
 
 if (BUILD_SHARED_LIBS)
+    install(TARGETS cmpnct_unicode LIBRARY)
+
     set_target_properties(llama PROPERTIES POSITION_INDEPENDENT_CODE ON)
     target_compile_definitions(llama PRIVATE LLAMA_SHARED LLAMA_BUILD)
     if (LLAMA_METAL)
